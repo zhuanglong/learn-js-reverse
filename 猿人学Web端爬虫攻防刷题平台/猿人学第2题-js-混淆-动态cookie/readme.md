@@ -131,7 +131,7 @@ debugger;
 
 死循环代码如下：
 
-![image-20241023175538728](C:\Users\long.zhuang\AppData\Roaming\Typora\typora-user-images\image-20241023175538728.png)
+![](https://gitee.com/zloooong/image_store/raw/master/img/image-20241023175538728.png)
 
 修改变量 `var _0x5115cc = !![];` => `var _0x5115cc = false;` ，这样就不会执行到该函数。
 
