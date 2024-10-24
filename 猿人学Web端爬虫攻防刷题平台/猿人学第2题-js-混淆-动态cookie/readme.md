@@ -153,12 +153,39 @@ window.my_0x145d46 = _0x145d46;
 
 // 定义函数调用
 function playload_m() {
-    alert(my_0x145d46(1729490593000));
+    var timeStamp = Date['\x70\x61\x72' + '\x73\x65'](new Date());
+    var encrypted = my_0x145d46(timeStamp);
+    var mValue = 'm=' + encrypted + '|' + timeStamp;
+    alert(mValue);
 }
 
 playload_m();
 ```
 
+## 5. `console.log` 报错问题
+
+![](https://gitee.com/zloooong/image_store/raw/master/img/202410241031305.png)
+
+这是因为 `console.log` 被重写了，在最开始的位置把 `console.log` 赋值给另一个值即可。
+
+```
+myconsole = console.log;
+```
+
+全部环境修复：
+
+```js
+// 修复环境值
+var window = window || {};
+var navigator = navigator || {};
+
+// 修复打印
+var myconsole = console.log;
+```
+
+
+
 参考：
+
 - https://www.cnblogs.com/zichliang/p/17433941.html
 - https://blog.csdn.net/Yy_Rose/article/details/126854940
