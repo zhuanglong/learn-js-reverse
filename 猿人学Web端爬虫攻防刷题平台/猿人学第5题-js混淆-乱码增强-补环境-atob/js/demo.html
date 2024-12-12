@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <script src="./crypto-js.js"></script>
+  <script src="./vmjs.js"></script>
+</head>
+<style>
+  
+</style>
+
+<body>
+  <script type="text/javascript">
+    // 方案1：扣代码生成存在问题，_$pr 中的时间戳都一样，应该是有些代码没扣完整导致。
+    // (async function() {
+    //   function sleep(ms) {
+    //     return new Promise(resolve => setTimeout(resolve, ms));
+    //   }
+
+    //   function _0x12eaf3() {
+    //     return Date['parse'](new Date());
+    //   }
+
+    //   function _0x2d5f5b() {
+    //     return new Date()['valueOf']();
+    //   }
+
+    //   const param_f = Date['parse'](new Date());
+
+    //   const _$pr = [];
+    //   for (let index = 0; index < 4; index++) {
+    //     const _$Wa = _0x12eaf3();
+    //     _$pr.push(window._0x474032(_$Wa));
+    //   }
+
+    //   const param_m = _0x2d5f5b()['toString']();
+    //   const cookie_m = 'm=' + window._0x474032(param_m);
+    //   _$pr.push(window._0x474032(param_m));
+
+    //   const _$Ww = CryptoJS['enc']['Utf8']['parse'](_$pr['toString']());
+    //   const _$qF = CryptoJS['enc']['Utf8']['parse'](window['btoa'](param_m).slice(0, 16));
+      
+    //   const _0x29dd83 = CryptoJS['AES']['encrypt'](_$Ww, _$qF, {
+    //     mode: CryptoJS['mode']['ECB'],
+    //     padding: CryptoJS['pad']['Pkcs7'],
+    //   });
+    //   const cookie_RM4hZBv0dDon443M = _0x29dd83['toString']();
+
+    //   console.log({ param_m, param_f, cookie_m, _$pr, cookie_RM4hZBv0dDon443M });
+    // })()
+
+    // 方案2：直接取 window[xx] 的值
+    (function() {
+      const param_f = window.$_zw[23];
+      const param_m = window._$is;
+      const _$pr = window['_$pr'];
+
+      const _$Ww = CryptoJS['enc']['Utf8']['parse'](_$pr['toString']());
+      const _$qF = CryptoJS['enc']['Utf8']['parse'](window['btoa'](param_m).slice(0, 16));
+      
+      const _0x29dd83 = CryptoJS['AES']['encrypt'](_$Ww, _$qF, {
+        mode: CryptoJS['mode']['ECB'],
+        padding: CryptoJS['pad']['Pkcs7'],
+      });
+      const cookie_RM4hZBv0dDon443M = _0x29dd83['toString']();
+
+      console.log({ param_m, param_f, _$pr, cookie_RM4hZBv0dDon443M });
+    })()
+  </script>
+</body>
+
+</html>
