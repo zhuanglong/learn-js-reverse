@@ -4,7 +4,7 @@
 
 ![](https://gitee.com/zloooong/image_store/raw/master/img/202412051802359.png)
 
-![image-20241205180505943](C:\Users\long.zhuang\AppData\Roaming\Typora\typora-user-images\image-20241205180505943.png)
+![](https://gitee.com/zloooong/image_store/raw/master/img/image-20241205180505943.png)
 
 ## 2. 加密参数
 
